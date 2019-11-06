@@ -1,5 +1,6 @@
-<?php require($_SERVER['DOCUMENT_ROOT']."/lib/phpmailer/PHPMailerAutoload.php");?>
 <?php
+date_default_timezone_set('Asia/Bangkok');
+require 'PHPMailer/PHPMailerAutoload.php';
 header('Content-Type: text/html; charset=utf-8');
 
 $mail = new PHPMailer;
