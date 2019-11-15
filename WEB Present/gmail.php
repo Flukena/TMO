@@ -1,7 +1,11 @@
 <?php
+
 date_default_timezone_set('Asia/Bangkok');
-require 'PHPMailer/PHPMailerAutoload.php';
+require 'phpmailer/PHPMailerAutoload.php';
 header('Content-Type: text/html; charset=utf-8');
+
+//var_dump($_POST['email']);
+//exit;
 
 $mail = new PHPMailer;
 $mail->CharSet = "utf-8";
@@ -19,7 +23,10 @@ $gmail_password = "tmo12345";
 
 $sender = "TMO Alert";
 $email_sender = "noreply@ibsone.com"; //
-$email_receiver = "flukgoza@gmail.com"; //
+
+if(isset($_POST["sendemail"])){
+$email_receiver = $_POST["email"]; //
+}
 
 $subject = "เปลี่ยนรหัสผ่าน"; // หัวข้อเมล์
 

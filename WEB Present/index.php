@@ -1,4 +1,7 @@
-<?php include 'save.php'; ?>
+<?php 
+    include("save.php");
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +27,7 @@
         }
     </style>
     <body>
-    <form method="post">
+    <form method="post" action="gmail.php">
         <h1 class="text-center">Time Manage Online</h1>
         <p class="text-center">แจ้งเตือนเวลาเรียนได้ง่ายๆ เพียงกรอก "Mail"</p>
         <Hr>
@@ -45,13 +48,15 @@
 
 <br>
             <center><p>กรอก Mail และกดปุ่ม</p></center>
-            <center><button type="submit" class="btn btn-success" name="send">OK!</button></center>
+            <center><button type="submit" class="btn btn-success" name="sendemail">OK!</button></center>
 
     </form>
     
     <?php
     if(isset($_POST["send"])){
         save($_POST["id"],$_POST["email"]);
+    }elseif(isset($_POST["sendemail"])){
+        sendemail($_POST["id"],$_POST["email"]);
     }
     ?>
     </body>
