@@ -35,7 +35,9 @@ body {
 
 <center><form id="CommentForm">
 <br>
+<textarea rows="1" cols="5" style="border:3px dashed #FFFFFF;"  id="subject" placeholder="Subject" required></textarea><br>
 <textarea rows="5" cols="50" style="border:3px dashed #FFFFFF;"  id="idComment" placeholder="Comment" required></textarea><br>
+
 <br>
 <input type="submit" id="commentBtn">
 </form></center>
