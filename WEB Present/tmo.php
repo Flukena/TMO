@@ -39,7 +39,12 @@ body {
 <br>
 <input type="submit" id="commentBtn">
 </form></center>
-
+<?php
+include("sendemail.php");
+if(isset($_POST["commentBtn"])){
+  send($_POST["idComment"]);
+}
+?>
 
 
 </body>
