@@ -1,5 +1,5 @@
 <?php 
-    include("save/test.php");
+    include("save.php");
     
 ?>
 <!DOCTYPE html html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -20,46 +20,42 @@
     </head>
     <style>
         body{
-        background-image: url("image.jpg");
+        background-image: url("https://images.wallpaperscraft.com/image/laptop_cup_glasses_plant_114948_1280x720.jpg");
         background-size: 100%;
         background-repeat: no-repeat-x;
-        color: #ffffff;
         font-family: 'Roboto', sans-serif;
         }
     </style>
     <body>
-    <form method="post" action="gmail.php">
+    <form method="post">
         <br>
-        <h1 class="text-center">Time Manage Online</h1>
-        <p class="text-center">แจ้งเตือนเวลาเรียนได้ง่ายๆ เพียงกรอก "Mail"</p>
+        <h1 class="text-center"><font color="ffffff">Time Manage Online</h1></font>
+        <p class="text-center"><font color="ffffff">แจ้งเตือนเวลาเรียนได้ง่ายๆ เพียงกรอก "Mail"</font></p>
         <Hr>
-        <center><b><font size="7"><span id="date_time_eng"></span></font></b></center>
+        <center><b><font size="7" color="ffffff"><span id="date_time_eng"></span></font></b></center>
             
 <br>
 
         <div class="row justify-content-center">
             <div class="col-md-3 mb-3">
-                <label for="validationCustom04">ID</label>
+                <label for="validationCustom04"><font color="ffffff">ID</label></font>
                 <input type="number" class="form-control" name="id" required>
             </div>
 
             <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Email</label>
+                <label for="validationCustom04"><font color="ffffff">Email</label></font>
                 <input type="email" class="form-control" name="email" required>
             </div>
         </div>
 
 <br>
-            <center><p>กรอก Mail และกดปุ่ม</p></center>
             <center><button type="submit" class="btn btn-success" name="sendemail">OK!</button></center>
 
     </form>
     
     <?php
-    if(isset($_POST["send"])){
+    if(isset($_POST["sendemail"])){
         save($_POST["id"],$_POST["email"]);
-    }elseif(isset($_POST["sendemail"])){
-        sendemail($_POST["id"],$_POST["email"]);
     }
     ?>
     </body>

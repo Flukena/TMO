@@ -1,3 +1,6 @@
+<?php
+  include("gmail.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +9,7 @@
 <body>
 <style>
 body {
-  background-image: url("http://wallpaperswide.com/download/clock_2-wallpaper-3840x2400.jpg");
+  background-image: url("clock_2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -33,21 +36,19 @@ body {
 
 
 
-<center><form id="CommentForm">
+<center><form method="post">
 <br>
-<textarea rows="1" cols="5" style="border:3px dashed #FFFFFF;"  id="subject" placeholder="Subject" required></textarea><br>
-<textarea rows="5" cols="50" style="border:3px dashed #FFFFFF;"  id="idComment" placeholder="Comment" required></textarea><br>
+<textarea rows="2" cols="8" style="border:3px dashed #FFFFFF;"  name="subject" placeholder="Subject" required></textarea><br>
+<textarea rows="5" cols="50" style="border:3px dashed #FFFFFF;"  name="idComment" placeholder="Comment" required></textarea><br>
 
 <br>
-<input type="submit" id="commentBtn">
+<input type="submit" name="commentBtn">
 </form></center>
 <?php
-include("sendemail.php");
 if(isset($_POST["commentBtn"])){
-  send($_POST["idComment"]);
+  email($_POST["subject"],$_POST["idComment"]);
 }
 ?>
-
 
 </body>
 </html>
