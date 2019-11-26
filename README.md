@@ -41,7 +41,3 @@
 * [CSS](https://www.w3schools.com/css/)
 
 * [Bootstrap](https://getbootstrap.com/)
-
-## Screenshot
-
-![Main Menu](docs/mmenu.png)
