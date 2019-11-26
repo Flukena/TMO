@@ -3,6 +3,8 @@
 
 แก้ปัญหาการเข้าคลาสเรียนสายของนักศึกษา
 
+[Website](http://snap007.ml/tmo/?fbclid=IwAR3fnSWWNm-gc_vszwvvDQ9BxCZxPPJwKT4nKA8C5IEdbIYjGWCTnQGeNBo)
+
 ## แนวทางในการแก้ไขปัญหา
 จัดการเว็บ ให้สามารถใส่เวลาเรียนล่วงหน้า เมื่อเข้าใกล้เวลาเข้าคลาสเรียน จะมีข้อความแจ้งเตือนส่งไปให้กับนักศึกษา
 
@@ -39,3 +41,7 @@
 * [CSS](https://www.w3schools.com/css/)
 
 * [Bootstrap](https://getbootstrap.com/)
+
+## Screenshot
+
+![Main Menu](docs/mmenu.png)
