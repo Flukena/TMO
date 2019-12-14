@@ -24,7 +24,7 @@ function email($major,$commend){
 
 
 
-	$sender = "TMO Alert"
+	$sender = "TMO Alert";
 	$email_sender = "noreply@ibsone.com"; //
 
 	//if(isset($_POST["sendemail"])){
@@ -38,7 +38,7 @@ function email($major,$commend){
 	$mail->Password = $gmail_password;
 	$mail->setFrom($email_sender, $sender);
 	$mail->addAddress($email_receiver);
-	$mail->Subject = $subject;
+	$mail->Subject = "วิชา $subject";
 
 	$email_content = "
 	<!DOCTYPE html>
@@ -50,29 +50,29 @@ function email($major,$commend){
 	
 		<body>
 			<center><h1> ถึงเวลาเตรียมตัวเข้าเรียนเเล้ว </h>
-			<p>วิชา $commend กรุณาเข้าเรียนให้ตรงเวลา เเละเเจ้งเช็คชื่อกับอาจารย์ผู้สอน</p>
+			<p> $commend กรุณาเข้าเรียนให้ตรงเวลา เเละเเจ้งเช็คชื่อกับอาจารย์ผู้สอน</p>
 			<img style='width: 30%; height: 30%;' src='https://www.it.kmitl.ac.th/wp-content/themes/itkmitl2017wp/img/life/life-13.jpg'></h1></center>
 			
 		</body>
 	</html>
-	"
+	";
 
-	$keep = 0;
 	if($email_receiver){
 		$mail->msgHTML($email_content);
-		if (!$mail->send()) {  // สั่งให้ส่ง email
+		if (!$mail->send()) {
 
 			// กรณีส่ง email ไม่สำเร็จ
 			echo "<h3 class='text-center'>ระบบมีปัญหา กรุณาลองใหม่อีกครั้ง</h3>";
-			echo $mail->ErrorInfo; // ข้อความ รายละเอียดการ error
+			echo $mail->ErrorInfo;
 		}else{
 			$keep ++;
 			echo"<script language=\"JavaScript\">";
-			echo"alert('test')";
+			echo"alert('ส่งเรียบร้อย')";
 			echo"</script>";
-		}	
+		}
 	}
 }
 }
+
 
 ?>
