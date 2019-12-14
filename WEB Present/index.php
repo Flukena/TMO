@@ -24,37 +24,37 @@
         background-size: 100%;
         background-repeat: no-repeat-x;
         font-family: 'Roboto', sans-serif;
-        }
+        } /* ลวดลายและขนาดพื้นหลัง*/
     </style>
     <body>
-    <form method="post">
+    <form method="post"><!--รับข้อมูล-->
         <br>
-        <h1 class="text-center"><font color="ffffff">Time Manage Online</h1></font>
-        <p class="text-center"><font color="ffffff">แจ้งเตือนเวลาเรียนได้ง่ายๆ เพียงกรอก "Mail"</font></p>
+        <h1 class="text-center"><font color="ffffff">Time Manage Online</h1></font><!--หัวข้อเว็ป-->
+        <p class="text-center"><font color="ffffff">แจ้งเตือนเวลาเรียนได้ง่ายๆ เพียงกรอก "Mail"</font></p><!--คำอธิบาย-->
         <Hr>
         <center><b><font size="7" color="ffffff"><span id="date_time_eng"></span></font></b></center>
             
 <br>
 
-        <div class="row justify-content-center">
-            <div class="col-md-3 mb-3">
+        <div class="row justify-content-center"><!--จัดแถวจัดคอลัมน์-->
+            <div class="col-md-3 mb-3"><!--คอลัมน์id-->
                 <label for="validationCustom04"><font color="ffffff">ID</label></font>
-                <input type="number" class="form-control" name="id" required>
+                <input type="number" class="form-control" name="id" required><!--รับข้อมูลid-->
             </div>
 
-            <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3"><!--คอลัมน์ Email-->
                 <label for="validationCustom04"><font color="ffffff">Email</label></font>
-                <input type="email" class="form-control" name="email" required>
+                <input type="email" class="form-control" name="email" required><!--รับข้อมูลEmail-->
             </div>
         </div>
 
 <br>
-            <center><button type="submit" class="btn btn-success" name="sendemail">OK!</button></center>
+            <center><button type="submit" class="btn btn-success" name="sendemail">OK!</button></center><!--submit-->
 
     </form>
     
     <?php
-    if(isset($_POST["sendemail"])){
+    if(isset($_POST["sendemail"])){//ข้อมูลเวลา
         save($_POST["id"],$_POST["email"]);
     }
     ?>
